@@ -9,7 +9,7 @@ class Config:
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     DATA_DIR = os.path.join(BASE_DIR, 'data')
     PROCESSED_DIR = os.path.join(DATA_DIR, 'processed')
-    CRIME_CSV_PATH = os.path.join(DATA_DIR, 'crime.csv')
+    CRIME_CSV_PATH = os.path.join(DATA_DIR, 'preprocessed.csv')
     MODEL_PATH = os.path.join(PROCESSED_DIR, 'crime_model.pkl')
     SCALER_PATH = os.path.join(PROCESSED_DIR, 'scaler.pkl')
     

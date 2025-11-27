@@ -1,0 +1,59 @@
+Folder PATH listing for volume OS
+Volume serial number is 4239-989A
+C:.
+¦   .gitignore
+¦   FDS report.pdf
+¦   Procfile
+¦   README.md
+¦   requirements.txt
+¦   runtime.txt
+¦   structure.txt
+¦   
++---backend
+¦   ¦   app.py
+¦   ¦   config.py
+¦   ¦   evaluate.py
+¦   ¦   evaluation_metrics.txt
+¦   ¦   model_evaluation_results.png
+¦   ¦   requirements.txt
+¦   ¦   
+¦   +---cache
+¦   ¦       16b9a1879f71843f6943a5c2dff213e79640c729.json
+¦   ¦       
+¦   +---data
+¦   ¦   ¦   crime.csv
+¦   ¦   ¦   crime0.csv
+¦   ¦   ¦   preprocessed.csv
+¦   ¦   ¦   proc.ipynb
+¦   ¦   ¦   
+¦   ¦   +---processed
+¦   ¦           crime_model.pkl
+¦   ¦           osm_graph.pkl
+¦   ¦           scaler.pkl
+¦   ¦           
+¦   +---models
+¦   ¦   ¦   crime_model.py
+¦   ¦   ¦   route_optimizer.py
+¦   ¦   ¦   __init__.py
+¦   ¦   ¦   
+¦   ¦   +---__pycache__
+¦   ¦           crime_model.cpython-311.pyc
+¦   ¦           route_optimizer.cpython-311.pyc
+¦   ¦           __init__.cpython-311.pyc
+¦   ¦           
+¦   +---utils
+¦       ¦   data_processor.py
+¦       ¦   __init__.py
+¦       ¦   
+¦       +---__pycache__
+¦               data_processor.cpython-311.pyc
+¦               __init__.cpython-311.pyc
+¦               
++---frontend
+¦       index.html
+¦       
++---gallery
+        Screenshot 2025-11-16 182135.png
+        Screenshot 2025-11-16 182146.png
+        structure.png
+        

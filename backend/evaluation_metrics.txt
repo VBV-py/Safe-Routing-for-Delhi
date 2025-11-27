@@ -5,19 +5,16 @@ CRIME RISK MODEL - EVALUATION METRICS
 USE THESE METRICS IN YOUR RESEARCH PAPER:
 
 TEST SET PERFORMANCE:
-  R² Score (R-squared):           0.9922
+  Rï¿½ Score (R-squared):           0.9922
   MAE (Mean Absolute Error):      0.52
   RMSE (Root Mean Squared Error): 1.66
   MAPE (Mean Abs % Error):        6.40%
   Maximum Error:                  8.76
 
 TRAINING SET PERFORMANCE:
-  R² Score:  0.9924
+  Rï¿½ Score:  0.9924
   MAE:       0.38
   RMSE:      1.44
-
-  MAPE:      1632090963.08%
-  Maximum Error: 12.98
 
 MODEL CONFIGURATION:
   Algorithm:       Random Forest Regressor
