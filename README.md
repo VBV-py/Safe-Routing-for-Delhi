@@ -132,8 +132,8 @@ Follow these simple steps to set up and run the Safe Routing application on your
 * **Git**
 
 ### Steps
-
-1️⃣ **Clone Repository**
+  
+1️⃣ **Clone Repository**  
 Open your terminal or command prompt and run the following commands to clone the project and navigate into the directory:
 
 ```bash
