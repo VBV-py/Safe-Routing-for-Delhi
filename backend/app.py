@@ -8,7 +8,8 @@ import traceback
 print("="*60)
 print("STARTING SAFE ROUTING SYSTEM")
 print("="*60)
-
+from models import crime_model, route_optimizer
+from utils import data_processor
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 try:
