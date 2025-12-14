@@ -53,7 +53,7 @@ The system generates **three types of routes** between a source and destination:
 
 <!-- Insert screenshot of map with routes here -->
 
-![Route Preview](map-2.png)
+![Route Preview](map.png)
 <!-- Insert screenshot of route comparison metrics here -->
   
 
