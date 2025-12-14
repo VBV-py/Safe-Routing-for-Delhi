@@ -52,12 +52,12 @@ The system generates **three types of routes** between a source and destination:
 ## Output
 
 <!-- Insert screenshot of map with routes here -->
-**Route Preview**
-gallery/map.png
+
+![Route Preview](map-2.png)
 <!-- Insert screenshot of route comparison metrics here -->
   
-**Example Route Comparision**
-gallery/comparision.png
+
+![Route Comparision](comparision.png)
 ---
 
 ## Tech Stack
@@ -77,7 +77,7 @@ gallery/comparision.png
 ---
 
 ## Project Structure
-
+```bash
 Safe-Routing-Delhi
 ├── .gitignore
 ├── .python-version
@@ -117,12 +117,8 @@ Safe-Routing-Delhi
 │
 ├── frontend
 │   └── index.html
-│
-└── gallery
-    ├── Screenshot 2025-11-16 182135.png
-    ├── Screenshot 2025-11-16 182146.png
-    └── structure.png
 
+```
 ---
 
 ## 🚀 How to Run Locally
