@@ -49,12 +49,15 @@ The system generates **three types of routes** between a source and destination:
 
 ---
 
-## Example Output
+## Output
 
 <!-- Insert screenshot of map with routes here -->
-
+**Route Preview**
+gallery/map.png
 <!-- Insert screenshot of route comparison metrics here -->
-
+  
+**Example Route Comparision**
+gallery/comparision.png
 ---
 
 ## Tech Stack
@@ -139,19 +142,22 @@ Open your terminal or command prompt and run the following commands to clone the
 ```bash
 git clone [https://github.com/VBV-py/Safe-Routing-for-Delhi.git](https://github.com/VBV-py/Safe-Routing-for-Delhi.git)
 cd Safe-Routing-for-Delhi
+```
 
 2️⃣ **Install Dependencies**
 ```bash
 pip install -r requirements.txt
+```
 
 3️⃣ **Run the Application**
 ```bash
 python backend/app.py
+```
 
 4️⃣ **Open Browser**
 ```bash
 http://127.0.0.1:5000
-
+```
 
 ---
 **Foundation of Data Science Course Project**
