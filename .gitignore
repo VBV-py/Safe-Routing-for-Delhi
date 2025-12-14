@@ -26,6 +26,7 @@ ENV/
 env/
 .venv
 
+reports/
 # IDEs
 .vscode/
 .idea/
@@ -58,3 +59,5 @@ temp/
 
 # Large Data Files (optional - remove if you want to commit crime.csv)
 # backend/data/crime.csv
+reports 
+
