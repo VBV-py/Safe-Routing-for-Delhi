@@ -5,6 +5,33 @@ import os
 import sys
 import traceback
 
+# 1. SETUP PATHS FIRST
+# Get the absolute path of the current file's directory
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+# Get the parent directory (if your app.py is inside a folder like 'backend')
+PARENT_DIR = os.path.dirname(CURRENT_DIR)
+
+# Add paths to system BEFORE importing from them
+sys.path.append(CURRENT_DIR)
+sys.path.append(PARENT_DIR)
+
+print("="*60)
+print("STARTING SAFE ROUTING SYSTEM")
+print("="*60)
+
+# 2. NOW IMPORT CUSTOM MODULES
+try:
+    # Remove the duplicate imports you had before the try/except block
+    from models.crime_model import CrimeRiskAnalyzer
+    from models.route_optimizer import SafeRouteOptimizer
+    from utils.data_processor import CrimeDataProcessor
+    print("Modules imported successfully")
+except ImportError as e:
+    print(f"CRITICAL ERROR: Import failed: {e}")
+    print(f"Current Path: {sys.path}")
+    sys.exit(1)
+
+# ... rest of your code ...
 print("="*60)
 print("STARTING SAFE ROUTING SYSTEM")
 print("="*60)
@@ -265,10 +292,16 @@ if __name__ == '__main__':
     print("\n" + "="*60 + "\n")
     
     try:
-        port = int(os.environ.get("PORT", 5000))
-        app.run(host='0.0.0.0', port=port)
-    except KeyboardInterrupt:
-        print("\nStopped")
+        # Change default to 5001 to avoid AirPlay/System conflicts
+        port = int(os.environ.get("PORT", 5001)) 
+        app.run(host='0.0.0.0', port=port, debug=True) # debug=True helps see errors
     except Exception as e:
         print(f"\nError: {e}")
-        sys.exit(1)
+    # try:
+    #     port = int(os.environ.get("PORT", 5000))
+    #     app.run(host='0.0.0.0', port=port)
+    # except KeyboardInterrupt:
+    #     print("\nStopped")
+    # except Exception as e:
+    #     print(f"\nError: {e}")
+    #     sys.exit(1)

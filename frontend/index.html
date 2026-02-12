@@ -706,7 +706,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
     <script>
-        const API_URL = 'http://localhost:5000';
+        const API_URL = '';
         let map, routeLayers = {}, markerLayers = {}, initialized = false;
         let currentRouteData = {}, routeStats = {};
         let riskTimelineChart = null, crimePieChart = null;
@@ -1034,12 +1034,12 @@
             updateStatus('Initializing... ', 'loading');
 
             try {
-                const res = await fetch(`${API_URL}/api/initialize`, { method: 'POST' });
+                const res = await fetch(`/api/initialize`, { method: 'POST' });
                 const data = await res.json();
                 
                 if (data.success) {
                     try {
-                        const crimeRes = await fetch(`${API_URL}/api/crime-data`);
+                        const crimeRes = await fetch(`/api/crime-data`);
                         const crimeData = await crimeRes.json();
                         if (crimeData.success) {
                             realCrimeData = crimeData.crime_data;
@@ -1082,7 +1082,7 @@
             updateStatus('Finding routes...', 'loading');
 
             try {
-                const res = await fetch(`${API_URL}/api/route`, {
+                const res = await fetch(`/api/route`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ start_lat: startLat, start_lon: startLon, end_lat: endLat, end_lon: endLon })
@@ -1201,7 +1201,7 @@
 
         window.addEventListener('load', () => {
             initMap();
-            fetch(`${API_URL}/api/status`)
+            fetch(`/api/status`)
                 .then(r => r.json())
                 .then(data => {
                     if (data.initialized) {
