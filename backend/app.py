@@ -22,8 +22,12 @@ except ImportError as e:
     sys.exit(1)
 
 # app = Flask(__name__, static_folder='../frontend')
-app = Flask(__name__,
-            static_folder=os.path.join(os.getcwd(), "frontend"))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+FRONTEND_DIR = os.path.join(BASE_DIR, "frontend")
+
+app = Flask(__name__, static_folder=FRONTEND_DIR)
+
 
 CORS(app)
 
@@ -98,7 +102,10 @@ def initialize_system():
 
 @app.route('/')
 def index():
-    return send_from_directory(os.path.join(os.getcwd(), "frontend"), 'index.html')
+    return send_from_directory(FRONTEND_DIR, 'index.html')
+@app.route('/<path:path>')
+def serve_static(path):
+    return send_from_directory(FRONTEND_DIR, path)
 
 
 @app.route('/api/status', methods=['GET'])
