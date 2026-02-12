@@ -240,12 +240,10 @@ def get_crime_data():
         return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
-    print("\nFlask ready")
-    print("\nNEXT STEPS:")
-    print("1. Open: http://localhost:5000")
-    print("2. Click: Initialize System")
-    print("3. Wait: 2-3 min (first time) or 5 sec (later)")
-    print("4. Enter coordinates and find routes")
+    
+    print("Click: Initialize System")
+    print("Wait: 2-3 min (first time) or 5 sec (later)")
+    print("Enter coordinates and find routes")
     print("\nSample coordinates:")
     print("  Start: 28.6328, 77.2197")
     print("  End:   28.6129, 77.2295")
