@@ -21,7 +21,10 @@ except ImportError as e:
     print(f"Import failed: {e}")
     sys.exit(1)
 
-app = Flask(__name__, static_folder='../frontend')
+# app = Flask(__name__, static_folder='../frontend')
+app = Flask(__name__,
+            static_folder=os.path.join(os.getcwd(), "frontend"))
+
 CORS(app)
 
 crime_df = None
@@ -89,9 +92,14 @@ def initialize_system():
         print("="*60 + "\n")
         return False
 
+# @app.route('/')
+# def index():
+#     return send_from_directory('../frontend', 'index.html')
+
 @app.route('/')
 def index():
-    return send_from_directory('../frontend', 'index.html')
+    return send_from_directory(os.path.join(os.getcwd(), "frontend"), 'index.html')
+
 
 @app.route('/api/status', methods=['GET'])
 def get_status():
